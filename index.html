@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BloomNet</title>
+</head>
+<body>
+  <header>
+    <h1>BloomNet</h1>
+    <form id="search-form" aria-label="Search Wikipedia">
+      <input
+        id="search-input"
+        type="search"
+        placeholder="Search here..."
+        aria-label="Search here..."
+        required
+        autocomplete="off"
+      />
+      <button id="search-button" type="submit" aria-label="Search">🔍</button>
+      <div id="loading-spinner" title="Loading" aria-hidden="true"></div>
+    </form>
+  </header>
+
+  <main>
+    <div id="info-panel" aria-live="polite" aria-atomic="true">
+      Welcome! Search any topic to explore Wikipedia's vast knowledge.
+    </div>
+
+    <ul id="results" aria-live="polite" aria-label="Search results"></ul>
+
+    <section id="article" hidden>
+      <button id="back-button" aria-label="Back to search results">← Back to results</button>
+      <h2 id="article-title"></h2>
+      <div id="article-content" class="content" tabindex="0"></div>
+    </section>
+  </main>
+
+  <footer>
+    Powered by <a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">Wikipedia API</a>
+  </footer>
+</body>
+</html>
